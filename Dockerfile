@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8-apache
 LABEL maintainer="Sebastian Szypulski <admin@techalchemist.pl> (@TechAlchemistPL)"
 
 # Enable Apache Rewrite + Expires Module
@@ -44,7 +44,7 @@ RUN { \
     } > /usr/local/etc/php/conf.d/php-recommended.ini
 
 RUN pecl install apcu \
-    && pecl install yaml-2.0.4 \
+    && pecl install yaml \
     && docker-php-ext-enable apcu yaml
 
 # Set user to www-data
