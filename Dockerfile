@@ -1,4 +1,4 @@
-FROM php:8.0-apache
+FROM php:8-apache
 LABEL maintainer="Sebastian Szypulski <admin@techalchemist.pl> (@TechAlchemistPL)"
 
 # Enable Apache Rewrite + Expires Module
