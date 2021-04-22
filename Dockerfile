@@ -1,5 +1,5 @@
-FROM php:7.4-apache
-LABEL maintainer="Andy Miller <rhuk@getgrav.org> (@rhukster)"
+FROM php:8.0-apache
+LABEL maintainer="Sebastian Szypulski <admin@techalchemist.pl> (@TechAlchemistPL)"
 
 # Enable Apache Rewrite + Expires Module
 RUN a2enmod rewrite expires && \
