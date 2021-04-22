@@ -43,9 +43,9 @@ RUN { \
     echo 'expose_php=off'; \
     } > /usr/local/etc/php/conf.d/php-recommended.ini
 
-# RUN pecl install apcu \
-#     && pecl install yaml-2.0.4 \
-#     && docker-php-ext-enable apcu yaml
+RUN pecl install apcu \
+    && pecl install yaml \
+    && docker-php-ext-enable apcu yaml
 
 # Set user to www-data
 RUN chown www-data:www-data /var/www
